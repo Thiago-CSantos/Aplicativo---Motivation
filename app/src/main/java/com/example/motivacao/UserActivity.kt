@@ -1,8 +1,10 @@
 package com.example.motivacao
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.example.motivacao.databinding.ActivityUserBinding
 
 class UserActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,7 +24,21 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(botao: View) {
         if (botao.id == R.id.button_salvar){
-            var s = ""
+            salvarNome()
+
         }
     }
+
+    private fun salvarNome():Unit{
+        var nome = binding.editNome.text.toString()
+        if (nome != ""){
+            startActivity(Intent(applicationContext, MainActivity::class.java))
+            //finish destroi a tela anterior inpedindo de voltar nela
+            finish()
+        }
+        else{
+            Toast.makeText(applicationContext, "Deve informar o nome!", Toast.LENGTH_LONG).show()
+        }
+    }
+
 }

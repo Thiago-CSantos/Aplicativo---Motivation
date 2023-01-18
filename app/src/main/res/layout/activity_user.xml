@@ -42,6 +42,7 @@
         android:backgroundTint="@color/light_purple"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
+        android:textColor="@color/white"
         android:text="@string/salvar"
         android:textAllCaps="true" />
 
