@@ -3,4 +3,7 @@
     <string name="nova_frase">Nova Frase</string>
     <string name="texto_aleatorio_motivacional">Texto aleatorio motivacional</string>
     <string name="ola_koltin">Ola! Koltin</string>
+    <string name="vamos_comecar">Vamos começar?</string>
+    <string name="qual_o_seu_nome">Qual o seu nome?</string>
+    <string name="salvar">Salvar</string>
 </resources>
