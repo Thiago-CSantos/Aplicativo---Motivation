@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Motivacao</string>
+    <string name="nova_frase">Nova Frase</string>
+    <string name="texto_aleatorio_motivacional">Texto aleatorio motivacional</string>
+    <string name="ola_koltin">Ola! Koltin</string>
 </resources>
