@@ -10,6 +10,7 @@ import com.example.motivacao.databinding.ActivityUserBinding
 class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityUserBinding
+    private var security = SecurityPreference(applicationContext)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,20 +24,20 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(botao: View) {
-        if (botao.id == R.id.button_salvar){
+        if (botao.id == R.id.button_salvar) {
             salvarNome()
-
         }
     }
 
-    private fun salvarNome():Unit{
+    private fun salvarNome(): Unit {
         var nome = binding.editNome.text.toString()
-        if (nome != ""){
+
+        if (nome != "") {
             startActivity(Intent(applicationContext, MainActivity::class.java))
+            security.storeString("User_Name",nome)
             //finish destroi a tela anterior inpedindo de voltar nela
             finish()
-        }
-        else{
+        } else {
             Toast.makeText(applicationContext, "Deve informar o nome!", Toast.LENGTH_LONG).show()
         }
     }

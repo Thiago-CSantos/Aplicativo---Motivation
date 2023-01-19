@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         // esconder barra de nevagação
         supportActionBar?.hide()
 
@@ -19,13 +18,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Salvar nome por key
+        var nome = SecurityPreference(applicationContext).getString("User_Name")
+        binding.textUserName.text = "Ola!, $nome"
+
         binding.buttonNewPhrase.setOnClickListener(this)
 
     }
 
     override fun onClick(botao: View) {
-        if (botao.id == R.id.button_new_phrase){
-        var s = ""
+        if (botao.id == R.id.button_new_phrase) {
+            var s = ""
         }
     }
 }
