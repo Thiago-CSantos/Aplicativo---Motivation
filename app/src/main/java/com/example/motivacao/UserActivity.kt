@@ -10,7 +10,6 @@ import com.example.motivacao.databinding.ActivityUserBinding
 class UserActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityUserBinding
-    private var security = SecurityPreference(applicationContext)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +33,7 @@ class UserActivity : AppCompatActivity(), View.OnClickListener {
 
         if (nome != "") {
             startActivity(Intent(applicationContext, MainActivity::class.java))
-            security.storeString("User_Name",nome)
+            SecurityPreference(applicationContext).storeString("User_Name", nome)
             //finish destroi a tela anterior inpedindo de voltar nela
             finish()
         } else {

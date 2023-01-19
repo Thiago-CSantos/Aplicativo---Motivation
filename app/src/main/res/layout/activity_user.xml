@@ -28,6 +28,7 @@
         android:gravity="center"
         android:hint="@string/qual_o_seu_nome"
         android:inputType="text"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:textSize="22sp" />
 
@@ -41,8 +42,8 @@
         android:backgroundTint="@color/light_purple"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:textColor="@color/white"
         android:text="@string/salvar"
-        android:textAllCaps="true" />
+        android:textAllCaps="true"
+        android:textColor="@color/white" />
 
 </RelativeLayout>
