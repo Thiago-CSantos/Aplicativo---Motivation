@@ -22,7 +22,7 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:src="@drawable/ic_all_inclusive"
-            app:tint="@color/dark_purple" />
+            app:tint="@color/white" />
 
 
         <ImageView

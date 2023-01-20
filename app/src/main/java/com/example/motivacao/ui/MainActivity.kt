@@ -5,13 +5,14 @@ import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.example.motivacao.R
+import com.example.motivacao.data.Mock
 import com.example.motivacao.infra.SecurityPreference
 import com.example.motivacao.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var binding: ActivityMainBinding
-    private var categoryId =0
+    private var categoryId =1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         if (view.id == R.id.button_new_phrase) {
-            var s = ""
+            var s = Mock().getFrases(categoryId)
+            binding.textFrase.text = s
         }
         else if (view.id == R.id.image_ic_all) {
             binding.imageIcAll.setColorFilter(ContextCompat.getColor(applicationContext, R.color.white))
